@@ -11,7 +11,7 @@ pipeline {
         stage('Create File') {
             steps {
                 sh '''
-                    echo "This is a test file." > test.txt
+                    echo "This is a test file in basicpyhoncode repo." > test.txt
                     cat test.txt
                 '''
             }
