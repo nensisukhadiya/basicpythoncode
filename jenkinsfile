@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Say Hello') {
+            steps {
+                echo 'Hello, World!'
+            }
+        }
+
+        stage('Create File') {
+            steps {
+                sh '''
+                    echo "This is a test file." > test.txt
+                    cat test.txt
+                '''
+            }
+        }
+    }
+}
